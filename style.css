@@ -10,6 +10,7 @@
 	justify-content: space-between;
 	height: 9vh;
 	width: 100%;
+
 	background-color: rgba(0, 81, 255, 0.349);
 }
 
@@ -22,6 +23,7 @@
 	display: flex;
 	margin-right: 20px;
 	list-style: none;
+	align-items: center;
 }
 
 .links {
@@ -39,4 +41,108 @@ span {
 .links:hover {
 	color: rgb(13, 7, 13);
 	transition: 0.5s ease-in-out;
+}
+
+.down-all {
+	height: 100vh;
+	width: 100%;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+	margin-left: 40px;
+}
+
+.heading {
+	position: relative; /* change bottom content according to heading */
+}
+
+.online {
+	position: absolute; /* change content according to heading */
+	margin-top: 30px;
+	color: #0000cd;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.edu {
+	position: absolute;
+	margin-top: 70px;
+	font-size: 70px;
+	color: #0000cd;
+}
+
+.para {
+	position: absolute;
+	margin-top: 220px;
+	width: 40%;
+	color: rgb(48, 46, 46);
+	text-align: justify;
+}
+
+.come {
+	position: absolute;
+	margin-top: 380px;
+}
+.button {
+	position: absolute;
+	margin-top: 450px;
+	height: 40px;
+	width: 180px;
+	background-color: #0000cd;
+	border: none;
+	border-radius: 30px;
+	color: white;
+	font-size: 20px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end; /* Positions the column to the right */
+	margin-right: 100px;
+}
+
+.image {
+	position: absolute;
+	top: 150px;
+	max-width: 100%;
+}
+
+.icon {
+	position: absolute;
+	bottom: 80px;
+}
+
+.icon_right {
+	margin-left: 8px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+	.down-all {
+		flex-direction: column;
+	}
+
+	.left,
+	.right {
+		width: 100%;
+		position: static;
+	}
+
+	.image,
+	.icon {
+		position: static;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.image img,
+	.icon img {
+		max-width: 100%;
+		height: auto;
+	}
 }
